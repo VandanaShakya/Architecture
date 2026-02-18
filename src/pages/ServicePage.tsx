@@ -103,9 +103,7 @@ const ServicePage = () => {
                   {step.description}
                 </p>
                 
-                <button className="inline-flex items-center gap-2 text-pink-500 text-xs font-bold uppercase tracking-wider pt-4 hover:gap-4 transition-all group/btn">
-                  Learn More <MoveRight className="w-4 h-4" />
-                </button>
+               
               </div>
             </div>
           ))}
