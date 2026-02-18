@@ -13,7 +13,7 @@ const ProjectCategoryPage = () => {
 
   return (
     <Layout>
-      <HeroBanner image={category.image} title={category.title} subtitle={category.subtitle} height="medium" />
+      <HeroBanner image={category.image} title={category.title} subtitle={category.subtitle} height="full" />
 
       {/* Projects Grid */}
       <section className="py-24 lg:py-32">
@@ -51,7 +51,7 @@ const ProjectCategoryPage = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 lg:py-32 bg-primary">
+      {/* <section className="py-24 lg:py-32 bg-primary">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="font-display text-3xl md:text-4xl font-semibold text-primary-foreground mb-6">
             Have a Project in Mind?
@@ -63,7 +63,7 @@ const ProjectCategoryPage = () => {
             Let's Talk <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
-      </section>
+      </section> */}
     </Layout>
   );
 };

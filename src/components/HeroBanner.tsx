@@ -20,11 +20,12 @@ const HeroBanner = ({
   ctaLink = "/contact",
   overlay = "dark",
   height = "large",
+
 }: HeroBannerProps) => {
   const heightClasses = {
-    full: "h-screen",
-    large: "h-[85vh]",
-    medium: "h-[60vh]",
+    full: "h-[80vh] lg:h-screen",
+    large: "h-[70vh] lg:h-[88vh]",
+    medium: "h-[55vh] lg:h-[72vh]",
   };
 
   return (
@@ -57,6 +58,8 @@ const HeroBanner = ({
           </div>
         </div>
       </div>
+
+
     </section>
   );
 };

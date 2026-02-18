@@ -4,6 +4,7 @@ import HeroBanner from "@/components/HeroBanner";
 import SectionHeading from "@/components/SectionHeading";
 import { heroImg, services, projectCategories } from "@/data/siteData";
 import { ArrowRight } from "lucide-react";
+import heroLastImage from "@/assets/home-last.jpg";
 
 const Index = () => {
   return (
@@ -119,22 +120,39 @@ const Index = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 lg:py-32 bg-primary">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-primary-foreground mb-6">
-            Let's Build Something Extraordinary
-          </h2>
-          <p className="text-primary-foreground/60 max-w-xl mx-auto mb-10">
-            Ready to bring your architectural vision to life? Our team of experts is here to guide you through every step of the journey.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-block px-10 py-4 bg-primary-foreground text-foreground text-sm font-medium tracking-wide uppercase transition-all duration-300 hover:opacity-90"
-          >
-            Start Your Project
-          </Link>
-        </div>
-      </section>
+      <section className="relative h-screen w-full overflow-hidden flex items-center justify-center text-white">
+      {/* Background Image Container */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={heroLastImage}
+          alt="Architectural Interior"
+          className="h-full w-full object-cover"
+        />
+        {/* Dark Overlay for Text Contrast */}
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
+      </div>
+
+      {/* Content Layer */}
+      <div className="relative z-10 container mx-auto px-6 text-center max-w-5xl">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-normal tracking-tight leading-tight mb-6">
+          Discover a World of Architectural Excellence <br className="hidden md:block" />
+          With Inner Value
+        </h1>
+        
+        <p className="text-sm md:text-lg lg:text-xl font-light text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
+          Step into a world where imagination takes shape and dreams turn into 
+          breathtaking realities. Join us on a journey where creativity meets precision.
+        </p>
+
+        <button 
+          className="bg-[#A67157] hover:bg-[#8e5e48] transition-colors duration-300 text-white px-8 py-3 md:px-10 md:py-4 rounded-md text-lg font-medium shadow-lg"
+          onClick={() => console.log('Booking meeting...')}
+        >
+          Book a meeting
+        </button>
+      </div>
+    </section>
+     
     </Layout>
   );
 };

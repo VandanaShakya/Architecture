@@ -6,33 +6,35 @@
 
 @layer base {
   :root {
-    --background: 40 20% 98%;
+    /* Light theme with warm architectural accent #A86550 */
+    --background: 0 0% 100%;
     --foreground: 30 10% 12%;
 
-    --card: 40 15% 96%;
+    --card: 40 15% 98%;
     --card-foreground: 30 10% 12%;
 
     --popover: 40 20% 98%;
     --popover-foreground: 30 10% 12%;
 
-    --primary: 30 10% 12%;
-    --primary-foreground: 40 20% 98%;
+    /* Primary brand: #A86550 */
+    --primary: 14 36% 49%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 35 15% 92%;
+    --secondary: 35 20% 94%;
     --secondary-foreground: 30 10% 12%;
 
-    --muted: 35 10% 90%;
-    --muted-foreground: 30 5% 45%;
+    --muted: 35 15% 92%;
+    --muted-foreground: 30 6% 40%;
 
-    --accent: 32 30% 85%;
+    --accent: 14 36% 96%;
     --accent-foreground: 30 10% 12%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 35 15% 88%;
-    --input: 35 15% 88%;
-    --ring: 30 10% 12%;
+    --border: 35 18% 90%;
+    --input: 35 18% 90%;
+    --ring: 14 36% 49%;
 
     --radius: 0.25rem;
 
@@ -100,5 +102,14 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  @keyframes loader-bar {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
   }
 }
