@@ -60,8 +60,9 @@ const Footer = () => {
         </div>
 
         <div className="mt-16 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-600">© 2024 ArchStudio. All rights reserved.</p>
-          <div className="flex gap-6">
+        <p className="text-sm text-gray-600">
+  © {new Date().getFullYear()} ArchStudio. All rights reserved.
+</p>          <div className="flex gap-6">
             <Link to="/about" className="text-sm text-black hover:text-gray-800 transition-colors">About</Link>
             <Link to="/contact" className="text-sm text-black hover:text-gray-800 transition-colors">Contact</Link>
           </div>
